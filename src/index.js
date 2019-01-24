@@ -1,12 +1,40 @@
+// @flow
+
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import createBrowserHistory from 'history/createBrowserHistory';
+
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import configureStore from './redux/store';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const history = createBrowserHistory({
+  basename: process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/` : '/'
+});
+const { store, persistor } = configureStore(history);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const rootEl = document.getElementById('root');
+
+if (rootEl) {
+  ReactDOM.render(
+    <App history={history} store={store} persistor={persistor} />,
+    rootEl
+  );
+}
+
+// $FlowFixMe module object has hot property with webpack
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    const NextApp = require('./App').default;
+    if (rootEl) {
+      ReactDOM.render(<NextApp history={history} store={store} />, rootEl);
+    }
+  });
+}
+
+// // Display information in console about components re-rendering
+// if (process.env.NODE_ENV === 'development') {
+//   const { whyDidYouUpdate } = require('why-did-you-update'); // eslint-disable-line global-require
+//   // $FlowFixMe this is the right use of why did you update
+//   whyDidYouUpdate(React);
+// }
