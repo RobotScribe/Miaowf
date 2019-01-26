@@ -3,7 +3,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router';
 
-import LoadingIndicator from './components/LoadingIndicator';
+import LoadingIndicator from 'components/LoadingIndicator';
 
 const CreateProfile = lazy(() => import('./pages/CreateProfile'));
 const HomePage = lazy(() => import('./pages/HomePage'));
