@@ -7,6 +7,8 @@ import { ConnectedRouter } from 'connected-react-router';
 import { Route } from 'react-router';
 import type { BrowserHistory } from 'history/createBrowserHistory';
 
+import GlobalStyle from './global-styles';
+
 import Routes from './routes';
 
 type Props = {
@@ -21,6 +23,7 @@ const App = (props: Props) => (
       <ConnectedRouter history={props.history}>
         <Route path="/" component={Routes} />
       </ConnectedRouter>
+      <GlobalStyle />
     </PersistGate>
   </Provider>
 );
