@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 
-import Style from './HomePage.style';
+import Style from './SignInWithEmail.style';
 
 const SignInWithEmail = () => (
   <Style.Container>
@@ -9,4 +9,4 @@ const SignInWithEmail = () => (
   </Style.Container>
 );
 
-export default HomePage;
+export default SignInWithEmail;

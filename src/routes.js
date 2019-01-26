@@ -12,11 +12,7 @@ const routes = () => (
   <Suspense fallback={<LoadingIndicator centered />}>
     <Switch>
       {/* TODO: Remove Hack props => <Component {...props} when bumping to react-router v4.4+ */}
-      <Route
-        exact
-        path="/create-profile"
-        render={props => <CreateProfile {...props} />}
-      />
+      <Route exact path="/create-profile" render={props => <CreateProfile {...props} />} />
       <Route exact path="/" render={props => <HomePage {...props} />} />
     </Switch>
   </Suspense>

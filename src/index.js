@@ -9,17 +9,14 @@ import App from './App';
 import configureStore from './redux/store';
 
 const history = createBrowserHistory({
-  basename: process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/` : '/'
+  basename: process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/` : '/',
 });
 const { store, persistor } = configureStore(history);
 
 const rootEl = document.getElementById('root');
 
 if (rootEl) {
-  ReactDOM.render(
-    <App history={history} store={store} persistor={persistor} />,
-    rootEl
-  );
+  ReactDOM.render(<App history={history} store={store} persistor={persistor} />, rootEl);
 }
 
 // $FlowFixMe module object has hot property with webpack

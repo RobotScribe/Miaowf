@@ -13,5 +13,5 @@ export default {
 
   Link: styled.a`
     text-decoration: none;
-  `
+  `,
 };

@@ -1,0 +1,16 @@
+[ignore]
+.*/node_modules/redux-persist/lib/integration/react.js.flow
+.*/node_modules/flow-coverage-report/
+
+[include]
+
+[libs]
+flow-typed
+
+[lints]
+
+[options]
+module.name_mapper='^\(\/?.*\)$' -> '<PROJECT_ROOT>/src/\1'
+
+[version]
+0.86.0

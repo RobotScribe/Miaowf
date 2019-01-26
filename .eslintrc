@@ -1,0 +1,70 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:flowtype/recommended",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react",
+    "react-app"
+  ],
+  "plugins": [
+    "flowtype",
+    "import",
+    "jest",
+    "jsx-a11y",
+    "mysticatea",
+    "prefer-object-spread",
+    "prettier",
+    "react"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "jest/globals": true,
+    "mocha": true,
+    "node": true
+  },
+  "globals": {
+    "alert": true,
+    "document": true,
+    "localStorage": true,
+    "navigator": true,
+    "window": true,
+    "HTMLElement": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "all",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false
+      }
+    ],
+    "flowtype/define-flow-type": "warn",
+    "flowtype/delimiter-dangle": ["warn", "always-multiline"],
+    "flowtype/semi": ["warn", "always"],
+    "flowtype/use-flow-type": "warn",
+    "flowtype/require-valid-file-annotation": ["error", "always"],
+    "import/extensions": ["error", "never", { "png": "always" }],
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "mysticatea/no-useless-rest-spread": "error",
+    "prefer-object-spread/prefer-object-spread": "error",
+    "react/destructuring-assignment": "off",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/no-array-index-key": "error",
+    "react/prefer-stateless-function": "error",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }]
+  },
+  "settings": {
+    "react": {
+      "version": "16.6"
+    }
+  }
+}

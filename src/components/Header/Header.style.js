@@ -32,5 +32,5 @@ export default {
     background-color: ${MiaowfColors.black};
     height: 100px;
     height: ${BLACK_HEADER_HEIGHT}px;
-  `
+  `,
 };

@@ -1,12 +1,11 @@
 // @flow
 import * as React from 'react';
-
 import Header from 'components/Header';
 
 import Style from './PageFrame.style';
 
 type Props = {
-  children: React$Node
+  children: React$Node,
 };
 
 const PageFrame = (props: Props) => (

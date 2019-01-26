@@ -11,5 +11,5 @@ export default {
   Content: styled.div`
     position: relative;
     top: ${BLACK_HEADER_HEIGHT + TABS_HEIGHT}px;
-  `
+  `,
 };

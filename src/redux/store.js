@@ -31,15 +31,11 @@ export default function configureStore(history: BrowserHistory) {
   const persistConfig = {
     key: 'root',
     whitelist: ['user'],
-    storage
+    storage,
   };
   const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-  const store = createStore(
-    persistedReducer,
-    initialState,
-    composeEnhancers(...enhancers)
-  );
+  const store = createStore(persistedReducer, initialState, composeEnhancers(...enhancers));
 
   sagaMiddleware.run(rootSaga);
   store.runSaga = sagaMiddleware.run;

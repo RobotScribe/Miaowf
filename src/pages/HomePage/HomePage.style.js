@@ -42,5 +42,5 @@ export default {
     :hover {
       box-shadow: 0 0 10px ${MiaowfColors.white};
     }
-  `
+  `,
 };

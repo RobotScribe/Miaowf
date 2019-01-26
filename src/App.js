@@ -14,7 +14,7 @@ import Routes from './routes';
 type Props = {
   history: BrowserHistory,
   persistor?: Object,
-  store: Store<State, *, *>
+  store: Store<State, *, *>,
 };
 
 const App = (props: Props) => (
