@@ -5,6 +5,7 @@ export const MiaowfColors = {
   black: '#000000',
   background: '#555555',
   orange: '#d16200',
+  red: '#ff0000',
 };
 
 export const TABS_HEIGHT = 40;

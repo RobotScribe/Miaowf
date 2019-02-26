@@ -6,7 +6,7 @@ import HomePage from './HomePage';
 const mapStateToProps = (state: State) => ({});
 
 const mapDispatchToProps = (dispatch: Dispatch<Action>): Object => ({
-  redirectToSignIn: (): Action => dispatch(push('/sign-in')),
+  redirectToSignIn: (): Action => dispatch(push('/sign-up')),
 });
 
 export default connect(

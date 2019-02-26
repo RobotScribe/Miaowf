@@ -1,5 +1,5 @@
 // @flow
 
-declare type State = {};
+declare type State = { signUp: SignUpState };
 
-declare type Action = () => void;
+declare type Action = SignUpAction;
