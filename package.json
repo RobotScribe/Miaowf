@@ -29,8 +29,8 @@
   "scripts": {
     "analyze": "env-cmd .env.${REACT_APP_ENV} react-app-rewired build --analyze-bundle",
     "build": "env-cmd .env.${REACT_APP_ENV} react-app-rewired build",
-    "build:preprod": "REACT_APP_ENV=preprod yarn run build",
-    "build:prod": "REACT_APP_ENV=prod yarn run build",
+    "build:preprod": "REACT_APP_ENV=preprod npm run build",
+    "build:prod": "REACT_APP_ENV=prod npm run build",
     "bundlesize": "bundlesize",
     "check-audit": "check-audit",
     "resolve-audit": "resolve-audit",
@@ -40,12 +40,11 @@
     "generate": "plop --plopfile scripts/generators/index.js",
     "lint": "eslint --ext .jsx,.js -c .eslintrc src",
     "lint:fix": "eslint --fix --ext .jsx,.js -c .eslintrc src",
-    "preinstall": "ps -fp $PPID | grep -q yarn || (echo '\\033[0;33mNpm not supported, please use NPM.\\033[0m'; exit 1)",
-    "reset": "rm -rf node_modules && yarn install",
+    "reset": "rm -rf node_modules && npm install",
     "start": "react-app-rewired start",
-    "test": "yarn run lint && yarn run flow && yarn run test:coverage -- --updateSnapshot",
+    "test": "npm run lint && npm run flow && npm run test:coverage -- --updateSnapshot",
     "test:unit": "react-app-rewired test",
-    "test:coverage": "yarn run test:unit -- --coverage"
+    "test:coverage": "npm run test:unit -- --coverage"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -88,7 +87,7 @@
     "eslint-plugin-prefer-object-spread": "1.2.1",
     "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-react": "7.11.1",
-    "flow-bin": "0.86.0",
+    "flow-bin": "^0.86.0",
     "flow-coverage-report": "0.6.0",
     "flow-typed": "2.5.1",
     "plop": "2.1.0",
