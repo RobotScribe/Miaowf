@@ -1,5 +1,9 @@
 {
-  "name": "bnp-e-console",
+  "name": "miaowf",
+  "engines": {
+    "node":"8.4.0",
+    "npm": "5.3.0"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,24 +28,27 @@
     "redux": "4.0.1",
     "redux-persist": "5.10.0",
     "redux-saga": "0.16.2",
+    "serve": "^10.1.2",
     "styled-components": "4.1.1"
   },
   "scripts": {
     "analyze": "env-cmd .env.${REACT_APP_ENV} react-app-rewired build --analyze-bundle",
-    "build": "env-cmd .env.${REACT_APP_ENV} react-app-rewired build",
     "build:preprod": "REACT_APP_ENV=preprod npm run build",
     "build:prod": "REACT_APP_ENV=prod npm run build",
     "bundlesize": "bundlesize",
     "check-audit": "check-audit",
     "resolve-audit": "resolve-audit",
-    "eject": "react-app-rewired eject",
     "flow": "flow",
     "flow:coverage": "flow-coverage-report --config=.flowcoverageconfig",
     "generate": "plop --plopfile scripts/generators/index.js",
     "lint": "eslint --ext .jsx,.js -c .eslintrc src",
     "lint:fix": "eslint --fix --ext .jsx,.js -c .eslintrc src",
     "reset": "rm -rf node_modules && npm install",
-    "start": "react-app-rewired start",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build",
     "test": "npm run lint && npm run flow && npm run test:coverage -- --updateSnapshot",
     "test:unit": "react-app-rewired test",
     "test:coverage": "npm run test:unit -- --coverage"

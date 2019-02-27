@@ -8,7 +8,7 @@ export default createGlobalStyle`
     line-height: 1.5;
     margin: 0;
     font-family: Verdana, Geneva, sans-serif;
-    background-color:${MiaowfColors.background} 
+    background-color:${MiaowfColors.background}
   }
 
   @page {
