@@ -1,7 +1,7 @@
 // @flow
 
 import { createGlobalStyle } from 'styled-components';
-import { MiaowfColors } from 'styles';
+import { MiaowfColors } from './styles';
 
 export default createGlobalStyle`
   body {
